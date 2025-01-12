@@ -1,4 +1,4 @@
-digits = [9,9]
+digits = list(map(int, input().split()))
 
 if digits[-1] != 9:
     digits[-1] += 1
