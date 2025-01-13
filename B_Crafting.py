@@ -1,33 +1,29 @@
-def jee(arr, x):
-    return [arr[i] - 1 if i != x else arr[i] + 1 for i in range(len(arr))]
+T = int(input())
 
-t = int(input())
-
-for _ in range(t):
+for _ in range(T):
     n = int(input())
-    a = list(map(int, input().split()))
-    b = list(map(int, input().split()))
-    
+    a = list(map(int,input().split()))
+    b = list(map(int,input().split()))
+
     count = 0
-    nee = "YES"
+    count1 = 0
 
     for i in range(n):
         if a[i] < b[i]:
-            a = jee(a, i)
             count += 1
+            count1 += b[i] - a[i]
+
+    if count == 0:
+        print("YES")
+    elif count > 1:
+        print("NO")
         
-        if count == 2:
-            nee = "NO"
-            break
-
-        # print(a)
-    print(nee)
-
-
-        
-
-
-
-
-        
-
+    else:
+        count2 = 0
+        for i in range(n):
+            if a[i] - b[i] < count1:
+                count2 += 1
+        if count2 == 1:
+            print("YES")
+        else:
+            print("NO")
