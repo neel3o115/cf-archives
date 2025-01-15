@@ -1,26 +1,28 @@
-n, k = map(int, input().split())
-a = input()
+n , k = map(int , input().split())
 
-srt = a.index("G")
-end = a.index("T")
-nee = "YES"
+li = list(input())
 
-if srt > end:
-    srt, end = end, srt
+l = 0
+r = n-1
 
-for i in range(srt, end+1, k):
+g = -1
+t = -1
 
-    if a[i] == "#":
-        nee = "NO"
+
+for i in range(n):
+    if li[i] == "G":
+        g = i
+        break
+    elif li[i] == "T":
+        t = i
         break
 
-    if srt + k > end:
-        nee = "NO"
+ans = "NO"
+
+for i in range(max(g,t)+k,n,k):
+    if li[i] in ["G","T"]:
+        ans = "YES"
+    elif li[i] == "#":
         break
 
-    if i == end:
-        if a[i] == ".":
-            nee = "NO"
-            break
-
-print(nee)
+print(ans)
