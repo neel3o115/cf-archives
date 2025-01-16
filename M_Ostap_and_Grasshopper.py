@@ -1,13 +1,11 @@
 n , k = map(int , input().split())
 
 li = list(input())
-
 l = 0
 r = n-1
 
 g = -1
 t = -1
-
 
 for i in range(n):
     if li[i] == "G":
