@@ -12,7 +12,3 @@ for i in range(1, len(nums)):
 nums.sort()
 
 print(nums[:len(nums)-count])
-
-
-        
-  
