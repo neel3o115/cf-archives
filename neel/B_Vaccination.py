@@ -1,0 +1,19 @@
+PI = 3.14159265358979323846
+E = 2.718281828459045
+INF = 1000000000000000000
+MOD1 = 1000000007
+MOD2 = 998244353
+
+def solve():
+    n,k,d,w = map(int, input().split())
+    arr = list(map(int, input().split()))
+    i = 0
+    
+    
+
+def main():
+    t = int(input()) 
+    for _ in range(t):
+        solve()
+
+main()
